@@ -38,7 +38,7 @@ const countriesState = atom<Country[]>({
   // effects_UNSTABLE: [persistAtom],
 });
 
-function useCountries(countryCode: string) {
+export function useCountries(countryCode: string) {
   //
   const [countries, setCountries] = useRecoilState(countriesState);
 
@@ -139,7 +139,7 @@ type CountryProps = {
 };
 const CountryComponent: React.FC<CountryProps> = ({ country }) => {
   const showColors = useRecoilValue(colorState);
-  const { updateCountry, setTags } = useCountries(country.code);
+  // const { updateCountry, setTags } = useCountries(country.code);
   const [hover, setHover] = useState(false);
   const onMouseEnter = () => setHover(true);
   const onMouseLeave = () => setHover(false);
