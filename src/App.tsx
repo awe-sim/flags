@@ -144,8 +144,8 @@ const CountryComponent: React.FC<CountryProps> = ({ country }) => {
   const onMouseEnter = () => setHover(true);
   const onMouseLeave = () => setHover(false);
   const url = (() => {
-    if (showColors || hover) return `/public/${country.pngImage}`;
-    return `/public/${country.pngOutline}`;
+    if (showColors || hover) return `${country.pngImage}`;
+    return `${country.pngOutline}`;
   })();
   return (
     <Card variant="outlined" onMouseEnter={showColors ? undefined : onMouseEnter} onMouseLeave={showColors ? undefined : onMouseLeave}>
