@@ -28,7 +28,7 @@ const itemsPerRowState = atom<number>({
 
 const continentState = atom<Continent | undefined>({
   key: 'continentState',
-  default: Continent.EUROPE,
+  default: undefined,
   // effects_UNSTABLE: [persistAtom],
 });
 
